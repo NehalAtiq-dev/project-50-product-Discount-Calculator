@@ -1,0 +1,1527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeenat Bags - Premium Pakistani Handbags</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1a5f4a;
+            --gold: #d4af37;
+            --rose-gold: #e8b4a5;
+            --cream: #faf7f2;
+            --dark: #2c241b;
+            --accent: #c9a227;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--cream);
+            color: var(--dark);
+        }
+
+        h1, h2, h3, .brand-font {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Navigation */
+        nav {
+            background: linear-gradient(135deg, var(--primary) 0%, #0d3b2e 100%);
+            padding: 1rem 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: white;
+            text-decoration: none;
+            font-size: 1.8rem;
+            font-weight: 700;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .logo i {
+            color: var(--gold);
+            font-size: 2rem;
+        }
+
+        .search-box {
+            flex: 0 1 500px;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 45px 12px 20px;
+            border: 2px solid rgba(255,255,255,0.2);
+            border-radius: 30px;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        .search-box input::placeholder {
+            color: rgba(255,255,255,0.7);
+        }
+
+        .search-box input:focus {
+            background: white;
+            color: var(--dark);
+            outline: none;
+        }
+
+        .search-box button {
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--gold);
+            border: none;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            color: white;
+            font-weight: 600;
+        }
+
+        .nav-icons {
+            display: flex;
+            gap: 25px;
+            color: white;
+            font-size: 1.3rem;
+        }
+
+        .nav-icons i {
+            cursor: pointer;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-icons i:hover {
+            color: var(--gold);
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: var(--gold);
+            color: white;
+            font-size: 0.7rem;
+            padding: 2px 6px;
+            border-radius: 50%;
+            font-weight: bold;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1548036328-c9fa89d128fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4af37' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: var(--gold);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            border: 2px solid var(--gold);
+        }
+
+        .cta-btn:hover {
+            background: transparent;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(212,175,55,0.3);
+        }
+
+        /* Categories */
+        .categories {
+            padding: 4rem 5%;
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 3rem;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--gold);
+        }
+
+        .cat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .cat-card {
+            position: relative;
+            height: 300px;
+            border-radius: 15px;
+            overflow: hidden;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .cat-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .cat-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .cat-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .cat-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(26,95,74,0.9), transparent);
+            padding: 2rem 1rem;
+            color: white;
+            text-align: center;
+        }
+
+        .cat-overlay h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Products Section */
+        .products {
+            padding: 4rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .filter-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .filter-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 8px 20px;
+            border: 2px solid var(--primary);
+            background: transparent;
+            color: var(--primary);
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: var(--gold);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            z-index: 2;
+        }
+
+        .product-img-container {
+            position: relative;
+            height: 320px;
+            overflow: hidden;
+            background: #f5f5f5;
+        }
+
+        .product-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .product-card:hover .product-img-container img {
+            transform: scale(1.05);
+        }
+
+        .quick-view {
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            right: 0;
+            background: rgba(26,95,74,0.95);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            transition: bottom 0.3s;
+            font-weight: 500;
+        }
+
+        .product-card:hover .quick-view {
+            bottom: 0;
+        }
+
+        .product-info {
+            padding: 1.5rem;
+        }
+
+        .product-brand {
+            color: var(--gold);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .product-title {
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
+            color: var(--dark);
+            font-weight: 600;
+        }
+
+        .product-price {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 0.5rem;
+        }
+
+        .current-price {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .original-price {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        .color-options {
+            display: flex;
+            gap: 5px;
+            margin-top: 10px;
+        }
+
+        .color-dot {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid white;
+            box-shadow: 0 0 0 1px #ddd;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .color-dot:hover {
+            transform: scale(1.2);
+        }
+
+        /* Product Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 2000;
+            overflow-y: auto;
+        }
+
+        .modal-content {
+            background: white;
+            max-width: 1200px;
+            margin: 50px auto;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            animation: slideIn 0.3s;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--dark);
+            z-index: 10;
+            width: 40px;
+            height: 40px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .modal-body {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            padding: 3rem;
+        }
+
+        .modal-image {
+            position: relative;
+        }
+
+        .modal-image img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .modal-details h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .modal-price {
+            font-size: 2rem;
+            color: var(--gold);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .modal-description {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .size-selector, .color-selector {
+            margin-bottom: 1.5rem;
+        }
+
+        .selector-label {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .size-options, .color-options-large {
+            display: flex;
+            gap: 10px;
+        }
+
+        .size-btn {
+            padding: 10px 20px;
+            border: 2px solid #ddd;
+            background: white;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .size-btn:hover, .size-btn.active {
+            border-color: var(--primary);
+            background: var(--primary);
+            color: white;
+        }
+
+        .color-btn-large {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px #ddd;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .color-btn-large:hover, .color-btn-large.active {
+            transform: scale(1.1);
+            box-shadow: 0 0 0 3px var(--primary);
+        }
+
+        .add-to-cart {
+            width: 100%;
+            padding: 18px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 2rem;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .add-to-cart:hover {
+            background: #124d3c;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(26,95,74,0.3);
+        }
+
+        /* Related Products in Modal */
+        .related-section {
+            padding: 2rem 3rem;
+            background: var(--cream);
+            border-top: 1px solid #eee;
+        }
+
+        .related-title {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .related-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .related-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .related-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .related-info {
+            padding: 1rem;
+        }
+
+        .related-price {
+            color: var(--primary);
+            font-weight: 700;
+            margin-top: 0.5rem;
+        }
+
+        /* Cart Sidebar */
+        .cart-sidebar {
+            position: fixed;
+            top: 0;
+            right: -400px;
+            width: 400px;
+            height: 100%;
+            background: white;
+            box-shadow: -5px 0 30px rgba(0,0,0,0.2);
+            z-index: 3000;
+            transition: right 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cart-sidebar.open {
+            right: 0;
+        }
+
+        .cart-header {
+            background: var(--primary);
+            color: white;
+            padding: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cart-items {
+            flex: 1;
+            overflow-y: auto;
+            padding: 1rem;
+        }
+
+        .cart-item {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+            position: relative;
+        }
+
+        .cart-item img {
+            width: 80px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .cart-item-details {
+            flex: 1;
+        }
+
+        .cart-item-title {
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .cart-item-price {
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .remove-item {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            color: #999;
+            cursor: pointer;
+        }
+
+        .cart-footer {
+            padding: 1.5rem;
+            border-top: 2px solid #eee;
+            background: var(--cream);
+        }
+
+        .cart-total {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .checkout-btn {
+            width: 100%;
+            padding: 15px;
+            background: var(--gold);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .checkout-btn:hover {
+            background: #b8941f;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 2500;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+
+        /* Checkout Modal */
+        .checkout-modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            width: 90%;
+            max-width: 600px;
+            border-radius: 20px;
+            z-index: 4000;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .checkout-modal.active {
+            display: block;
+        }
+
+        .checkout-header {
+            background: var(--primary);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .close-checkout {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        .checkout-body {
+            padding: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus {
+            border-color: var(--primary);
+            outline: none;
+        }
+
+        .card-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .payment-method {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .payment-option {
+            flex: 1;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .payment-option.active {
+            border-color: var(--primary);
+            background: rgba(26,95,74,0.05);
+        }
+
+        .payment-option i {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .pay-btn {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, var(--primary) 0%, #0d3b2e 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .pay-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(26,95,74,0.3);
+        }
+
+        /* Brands Section */
+        .brands {
+            padding: 4rem 5%;
+            background: white;
+            text-align: center;
+        }
+
+        .brand-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+            opacity: 0.6;
+        }
+
+        .brand-logos div {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--dark);
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 4rem 5% 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+
+        .footer-section h3 {
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: var(--gold);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background: var(--gold);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #999;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .hero h1 { font-size: 2.5rem; }
+            .modal-body { grid-template-columns: 1fr; }
+            .nav-container { flex-wrap: wrap; gap: 1rem; }
+            .search-box { order: 3; flex-basis: 100%; }
+        }
+
+        @media (max-width: 600px) {
+            .cart-sidebar { width: 100%; right: -100%; }
+            .product-grid { grid-template-columns: 1fr; }
+            .related-grid { grid-template-columns: 1fr 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <i class="fas fa-crown"></i>
+                <span>Zeenat Bags</span>
+            </a>
+            
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search for bags, brands, categories...">
+                <button onclick="performSearch()">GO</button>
+            </div>
+            
+            <div class="nav-icons">
+                <i class="fas fa-user"></i>
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-shopping-bag" onclick="toggleCart()">
+                    <span class="cart-count" id="cartCount">0</span>
+                </i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Elegance in Every Stitch</h1>
+            <p>Discover Pakistan's Finest Collection of Luxury Handbags</p>
+            <a href="#products" class="cta-btn">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories">
+        <h2 class="section-title">Shop by Category</h2>
+        <div class="cat-grid">
+            <div class="cat-card" onclick="filterCategory('clutch')">
+                <img src="https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Clutches">
+                <div class="cat-overlay">
+                    <h3>Bridal Clutches</h3>
+                    <p>Handcrafted Elegance</p>
+                </div>
+            </div>
+            <div class="cat-card" onclick="filterCategory('tote')">
+                <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Totes">
+                <div class="cat-overlay">
+                    <h3>Luxury Totes</h3>
+                    <p>Everyday Sophistication</p>
+                </div>
+            </div>
+            <div class="cat-card" onclick="filterCategory('shoulder')">
+                <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Shoulder Bags">
+                <div class="cat-overlay">
+                    <h3>Shoulder Bags</h3>
+                    <p>Classic Style</p>
+                </div>
+            </div>
+            <div class="cat-card" onclick="filterCategory('crossbody')">
+                <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Crossbody">
+                <div class="cat-overlay">
+                    <h3>Crossbody</h3>
+                    <p>Modern Convenience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <h2 class="section-title">Premium Collection</h2>
+        
+        <div class="filter-bar">
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="filterProducts('all')">All Bags</button>
+                <button class="filter-btn" onclick="filterProducts('gulahmed')">Gul Ahmed</button>
+                <button class="filter-btn" onclick="filterProducts('khaadi')">Khaadi</button>
+                <button class="filter-btn" onclick="filterProducts('sanasafinaz')">Sana Safinaz</button>
+                <button class="filter-btn" onclick="filterProducts('maria.b')">Maria.B</button>
+                <button class="filter-btn" onclick="filterProducts('nishat')">Nishat Linen</button>
+            </div>
+            <div style="color: #666;">
+                Showing <span id="showingCount">20</span> products
+            </div>
+        </div>
+
+        <div class="product-grid" id="productGrid">
+            <!-- Products will be inserted here by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Brands -->
+    <section class="brands">
+        <h2 class="section-title">Trusted Brands</h2>
+        <div class="brand-logos">
+            <div>Gul Ahmed</div>
+            <div>Khaadi</div>
+            <div>Sana Safinaz</div>
+            <div>Maria.B</div>
+            <div>Nishat</div>
+            <div>Alkaram</div>
+            <div>Sapphire</div>
+            <div>Junaid Jamshed</div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Zeenat</h3>
+                <p>Pakistan's premier destination for luxury handbags. We bring you the finest selection from top Pakistani designers.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#">Best Sellers</a></li>
+                    <li><a href="#">Sale</a></li>
+                    <li><a href="#">Lookbook</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Shipping Info</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Fashion Avenue, Lahore</li>
+                    <li><i class="fas fa-phone"></i> +92 300 1234567</li>
+                    <li><i class="fas fa-envelope"></i> hello@zeenatbags.pk</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Zeenat Bags. All rights reserved. | Premium Pakistani Fashion</p>
+        </div>
+    </footer>
+
+    <!-- Product Detail Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalImg" src="" alt="">
+                </div>
+                <div class="modal-details">
+                    <div class="product-brand" id="modalBrand">Brand</div>
+                    <h2 id="modalTitle">Product Title</h2>
+                    <div class="modal-price" id="modalPrice">PKR 0</div>
+                    <div class="modal-description" id="modalDesc">
+                        Handcrafted with precision and love, this exquisite bag features traditional Pakistani craftsmanship combined with modern elegance. Perfect for weddings, parties, and special occasions.
+                    </div>
+                    
+                    <div class="color-selector">
+                        <span class="selector-label">Select Color:</span>
+                        <div class="color-options-large" id="modalColors">
+                            <!-- Colors inserted by JS -->
+                        </div>
+                    </div>
+
+                    <div class="size-selector">
+                        <span class="selector-label">Size:</span>
+                        <div class="size-options">
+                            <button class="size-btn active">Medium</button>
+                            <button class="size-btn">Large</button>
+                        </div>
+                    </div>
+
+                    <button class="add-to-cart" onclick="addToCartFromModal()">
+                        <i class="fas fa-shopping-bag"></i> Add to Cart - <span id="modalBtnPrice">PKR 0</span>
+                    </button>
+
+                    <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #eee;">
+                        <div style="display: flex; gap: 2rem; color: #666; font-size: 0.9rem;">
+                            <span><i class="fas fa-truck" style="color: var(--gold);"></i> Free Shipping</span>
+                            <span><i class="fas fa-shield-alt" style="color: var(--gold);"></i> Authentic Guarantee</span>
+                            <span><i class="fas fa-undo" style="color: var(--gold);"></i> Easy Returns</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Related Products Section (20 bags from same category) -->
+            <div class="related-section">
+                <h3 class="related-title">More from this Collection (20 Items)</h3>
+                <div class="related-grid" id="relatedGrid">
+                    <!-- 20 related products inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="overlay" id="overlay" onclick="toggleCart()"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-bag"></i> Shopping Bag</h3>
+            <i class="fas fa-times" onclick="toggleCart()" style="cursor: pointer;"></i>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items inserted here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">PKR 0</span>
+            </div>
+            <button class="checkout-btn" onclick="openCheckout()">
+                Proceed to Checkout <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="overlay" id="checkoutOverlay" onclick="closeCheckout()"></div>
+    <div class="checkout-modal" id="checkoutModal">
+        <div class="checkout-header">
+            <h2><i class="fas fa-lock"></i> Secure Checkout</h2>
+            <span class="close-checkout" onclick="closeCheckout()">&times;</span>
+        </div>
+        <div class="checkout-body">
+            <div class="payment-method">
+                <div class="payment-option active" onclick="selectPayment(this, 'card')">
+                    <i class="fas fa-credit-card"></i>
+                    <div>Credit Card</div>
+                </div>
+                <div class="payment-option" onclick="selectPayment(this, 'cod')">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <div>Cash on Delivery</div>
+                </div>
+                <div class="payment-option" onclick="selectPayment(this, 'easypaisa')">
+                    <i class="fas fa-mobile-alt"></i>
+                    <div>EasyPaisa</div>
+                </div>
+            </div>
+
+            <form id="checkoutForm">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Enter your full name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="your@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" placeholder="+92 300 1234567" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Shipping Address</label>
+                    <input type="text" placeholder="Street address, city, Pakistan" required>
+                </div>
+
+                <div id="cardFields">
+                    <div class="form-group">
+                        <label>Card Number</label>
+                        <input type="text" placeholder="1234 5678 9012 3456" maxlength="19">
+                    </div>
+                    
+                    <div class="card-row">
+                        <div class="form-group">
+                            <label>Expiry Date</label>
+                            <input type="text" placeholder="MM/YY" maxlength="5">
+                        </div>
+                        <div class="form-group">
+                            <label>CVV</label>
+                            <input type="text" placeholder="123" maxlength="3">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Name on Card</label>
+                        <input type="text" placeholder="Full name as on card">
+                    </div>
+                </div>
+
+                <button type="submit" class="pay-btn">
+                    <i class="fas fa-lock"></i> Pay Securely PKR <span id="checkoutTotal">0</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Product Data - Pakistani Brands
+        const products = [
+            { id: 1, name: "Royal Velvet Clutch", brand: "gulahmed", price: 8500, category: "clutch", image: "https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?ixlib=rb-4.0.3&w=400", colors: ["#d4af37", "#8b0000", "#000000"] },
+            { id: 2, name: "Embroidered Tote", brand: "khaadi", price: 12000, category: "tote", image: "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?ixlib=rb-4.0.3&w=400", colors: ["#f5f5dc", "#2c241b", "#d4af37"] },
+            { id: 3, name: "Silk Evening Bag", brand: "sanasafinaz", price: 15000, category: "clutch", image: "https://images.unsplash.com/photo-1591561954557-26941169b49e?ixlib=rb-4.0.3&w=400", colors: ["#ff69b4", "#800080", "#ffd700"] },
+            { id: 4, name: "Leather Crossbody", brand: "maria.b", price: 9500, category: "crossbody", image: "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?ixlib=rb-4.0.3&w=400", colors: ["#8b4513", "#000000", "#ffffff"] },
+            { id: 5, name: "Mirror Work Clutch", brand: "nishat", price: 7800, category: "clutch", image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&w=400", colors: ["#ff0000", "#00ff00", "#0000ff"] },
+            { id: 6, name: "Bridal Potli Bag", brand: "gulahmed", price: 18500, category: "clutch", image: "https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?ixlib=rb-4.0.3&w=400", colors: ["#ffd700", "#ff1493", "#ffffff"] },
+            { id: 7, name: "Casual Shoulder Bag", brand: "khaadi", price: 6500, category: "shoulder", image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&w=400", colors: ["#808080", "#000000", "#8b4513"] },
+            { id: 8, name: "Luxury Hobo Bag", brand: "sanasafinaz", price: 22000, category: "shoulder", image: "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?ixlib=rb-4.0.3&w=400", colors: ["#000000", "#8b0000", "#d2691e"] },
+            { id: 9, name: "Beaded Evening Clutch", brand: "maria.b", price: 13500, category: "clutch", image: "https://images.unsplash.com/photo-1591561954557-26941169b49e?ixlib=rb-4.0.3&w=400", colors: ["#silver", "#gold", "#black"] },
+            { id: 10, name: "Canvas Tote", brand: "nishat", price: 4500, category: "tote", image: "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?ixlib=rb-4.0.3&w=400", colors: ["#ffffff", "#000000", "#000080"] },
+            { id: 11, name: "Mini Crossbody", brand: "gulahmed", price: 5500, category: "crossbody", image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&w=400", colors: ["#ffc0cb", "#e6e6fa", "#f0e68c"] },
+            { id: 12, name: "Woven Straw Bag", brand: "khaadi", price: 7200, category: "tote", image: "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?ixlib=rb-4.0.3&w=400", colors: ["#daa520", "#8b4513", "#ffffff"] },
+            { id: 13, name: "Velvet Box Clutch", brand: "sanasafinaz", price: 16800, category: "clutch", image: "https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?ixlib=rb-4.0.3&w=400", colors: ["#800020", "#2f4f4f", "#d4af37"] },
+            { id: 14, name: "Quilted Chain Bag", brand: "maria.b", price: 19500, category: "shoulder", image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&w=400", colors: ["#000000", "#c0c0c0", "#ff69b4"] },
+            { id: 15, name: "Embellished Clutch", brand: "nishat", price: 8900, category: "clutch", image: "https://images.unsplash.com/photo-1591561954557-26941169b49e?ixlib=rb-4.0.3&w=400", colors: ["#ff4500", "#32cd32", "#1e90ff"] },
+            { id: 16, name: "Leather Tote Large", brand: "gulahmed", price: 14500, category: "tote", image: "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?ixlib=rb-4.0.3&w=400", colors: ["#8b4513", "#000000", "#800000"] },
+            { id: 17, name: "Sling Bag", brand: "khaadi", price: 4200, category: "crossbody", image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&w=400", colors: ["#ffa500", "#800080", "#008000"] },
+            { id: 18, name: "Pearl Handle Clutch", brand: "sanasafinaz", price: 21000, category: "clutch", image: "https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?ixlib=rb-4.0.3&w=400", colors: ["#ffffff", "#fffacd", "#faf0e6"] },
+            { id: 19, name: "Boho Shoulder Bag", brand: "maria.b", price: 7800, category: "shoulder", image: "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?ixlib=rb-4.0.3&w=400", colors: ["#d2691e", "#556b2f", "#8b4513"] },
+            { id: 20, name: "Crystal Evening Bag", brand: "nishat", price: 17500, category: "clutch", image: "https://images.unsplash.com/photo-1591561954557-26941169b49e?ixlib=rb-4.0.3&w=400", colors: ["#silver", "#gold", "#rose-gold"] }
+        ];
+
+        let cart = [];
+        let currentProduct = null;
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            renderProducts(products);
+        });
+
+        // Render Products
+        function renderProducts(productsToRender) {
+            const grid = document.getElementById('productGrid');
+            grid.innerHTML = productsToRender.map(product => `
+                <div class="product-card" onclick="openProductModal(${product.id})">
+                    ${product.price > 15000 ? '<span class="product-badge">Premium</span>' : ''}
+                    <div class="product-img-container">
+                        <img src="${product.image}" alt="${product.name}">
+                        <div class="quick-view">Quick View</div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">${product.brand}</div>
+                        <h3 class="product-title">${product.name}</h3>
+                        <div class="product-price">
+                            <span class="current-price">PKR ${product.price.toLocaleString()}</span>
+                            ${product.price > 10000 ? `<span class="original-price">PKR ${(product.price * 1.2).toFixed(0)}</span>` : ''}
+                        </div>
+                        <div class="color-options">
+                            ${product.colors.map(color => `<div class="color-dot" style="background: ${color}"></div>`).join('')}
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+            
+            document.getElementById('showingCount').textContent = productsToRender.length;
+        }
+
+        // Filter Functions
+        function filterProducts(brand) {
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if(btn.textContent.toLowerCase().includes(brand) || (brand === 'all' && btn.textContent === 'All Bags')) {
+                    btn.classList.add('active');
+                }
+            });
+            
+            if(brand === 'all') {
+                renderProducts(products);
+            } else {
+                const filtered = products.filter(p => p.brand === brand);
+                renderProducts(filtered);
+            }
+        }
+
+        function filterCategory(category) {
+            const filtered = products.filter(p => p.category === category);
+            renderProducts(filtered);
+            document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function performSearch() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const filtered = products.filter(p => 
+                p.name.toLowerCase().includes(query) || 
+                p.brand.toLowerCase().includes(query) ||
+                p.category.toLowerCase().includes(query)
+            );
+            renderProducts(filtered);
+            document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Enter key for search
+        document.getElementById('searchInput').addEventListener('keypress', (e) => {
+            if(e.key === 'Enter') performSearch();
+        });
+
+        // Product Modal
+        function openProductModal(id) {
+            currentProduct = products.find(p => p.id === id);
+            document.getElementById('modalImg').src = currentProduct.image;
+            document.getElementById('modalBrand').textContent = currentProduct.brand.toUpperCase();
+            document.getElementById('modalTitle').textContent = currentProduct.name;
+            document.getElementById('modalPrice').textContent = 'PKR ' + currentProduct.price.toLocaleString();
+            document.getElementById('modalBtnPrice').textContent = 'PKR ' + currentProduct.price.toLocaleString();
+            
+            // Render colors
+            document.getElementById('modalColors').innerHTML = currentProduct.colors.map((color, idx) => `
+                <div class="color-btn-large ${idx === 0 ? 'active' : ''}" style="background: ${color}" onclick="selectColor(this)"></div>
+            `).join('');
+            
+            // Generate 20 related products from same category
+            const related = products.filter(p => p.category === currentProduct.category && p.id !== currentProduct.id);
+            // Duplicate to make 20 if needed
+            let displayRelated = [...related];
+            while(displayRelated.length < 20) {
+                displayRelated = [...displayRelated, ...related];
+            }
+            displayRelated = displayRelated.slice(0, 20);
+            
+            document.getElementById('relatedGrid').innerHTML = displayRelated.map(p => `
+                <div class="related-card" onclick="openProductModal(${p.id})">
+                    <img src="${p.image}" alt="${p.name}">
+                    <div class="related-info">
+                        <div style="font-size: 0.85rem; color: #666;">${p.brand}</div>
+                        <div style="font-weight: 600; margin-top: 0.3rem;">${p.name}</div>
+                        <div class="related-price">PKR ${p.price.toLocaleString()}</div>
+                    </div>
+                </div>
+            `).join('');
+            
+            document.getElementById('productModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('productModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        function selectColor(element) {
+            document.querySelectorAll('.color-btn-large').forEach(btn => btn.classList.remove('active'));
+            element.classList.add('active');
+        }
+
+        // Cart Functions
+        function addToCartFromModal() {
+            if(currentProduct) {
+                cart.push(currentProduct);
+                updateCart();
+                closeModal();
+                toggleCart();
+            }
+        }
+
+        function updateCart() {
+            document.getElementById('cartCount').textContent = cart.length;
+            const cartItems = document.getElementById('cartItems');
+            
+            if(cart.length === 0) {
+                cartItems.innerHTML = '<div style="text-align: center; padding: 3rem; color: #999;">Your bag is empty</div>';
+            } else {
+                cartItems.innerHTML = cart.map((item, index) => `
+                    <div class="cart-item">
+                        <img src="${item.image}" alt="${item.name}">
+                        <div class="cart-item-details">
+                            <div class="cart-item-title">${item.name}</div>
+                            <div style="font-size: 0.85rem; color: #666; margin-bottom: 0.3rem;">${item.brand}</div>
+                            <div class="cart-item-price">PKR ${item.price.toLocaleString()}</div>
+                        </div>
+                        <i class="fas fa-trash remove-item" onclick="removeFromCart(${index})"></i>
+                    </div>
+                `).join('');
+            }
+            
+            const total = cart.reduce((sum, item) => sum + item.price, 0);
+            document.getElementById('cartTotal').textContent = 'PKR ' + total.toLocaleString();
+            document.getElementById('checkoutTotal').textContent = total.toLocaleString();
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCart();
+        }
+
+        function toggleCart() {
+            document.getElementById('cartSidebar').classList.toggle('open');
+            document.getElementById('overlay').classList.toggle('active');
+        }
+
+        // Checkout Functions
+        function openCheckout() {
+            if(cart.length === 0) {
+                alert('Your bag is empty!');
+                return;
+            }
+            document.getElementById('checkoutModal').classList.add('active');
+            document.getElementById('checkoutOverlay').style.display = 'block';
+            toggleCart();
+        }
+
+        function closeCheckout() {
+            document.getElementById('checkoutModal').classList.remove('active');
+            document.getElementById('checkoutOverlay').style.display = 'none';
+        }
+
+        function selectPayment(element, method) {
+            document.querySelectorAll('.payment-option').forEach(opt => opt.classList.remove('active'));
+            element.classList.add('active');
+            
+            const cardFields = document.getElementById('cardFields');
+            if(method === 'card') {
+                cardFields.style.display = 'block';
+            } else {
+                cardFields.style.display = 'none';
+            }
+        }
+
+        document.getElementById('checkoutForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Order placed successfully! Thank you for shopping at Zeenat Bags.');
+            cart = [];
+            updateCart();
+            closeCheckout();
+        });
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('productModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+    </script>
+
+</body>
+</html>
